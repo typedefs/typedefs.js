@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/typedefs/typedefs.js.svg?branch=master)](https://travis-ci.com/typedefs/typedefs.js)
+
 # JS version of typedefs
 
 Generated from [`ParserJS.idr`](https://github.com/typedefs/typedefs/blob/master/parser.js/ParserJS.idr)
