@@ -1,6 +1,6 @@
 {
   "name": "typedefs-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "unpkg": "dist/typedefs.min.js",
   "main": "dist/typedefs.min.js",
@@ -27,10 +27,10 @@
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
-    "rollup": "^1.8.0",
+    "rollup": "^1.10.0",
     "rollup-plugin-analyzer": "^3.0.0",
     "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-commonjs": "^9.3.0",
+    "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-size-snapshot": "^0.8.0",
     "rollup-plugin-terser": "^4.0.4"
