@@ -1,6 +1,6 @@
 {
   "name": "typedefs-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "unpkg": "dist/typedefs.min.js",
   "main": "dist/typedefs.min.js",

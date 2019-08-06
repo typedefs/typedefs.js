@@ -18,10 +18,9 @@ Generated from [`ParserJS.idr`](https://github.com/typedefs/typedefs/blob/master
 For node
 
 ```js
-let {parseType, generateCode} = require('typedefs-js')
+let {generateType, generateTermSerializers} = require('typedefs-js')
 
-let ty = parseType('(name Bit (+ 1 1))')
-let haskellCode = generateCode('haskell', ty)
+let haskellCode = generateTermSerializers('haskell', '(name Bit (+ 1 1))')
 console.log(haskellCode)
 ```
 
@@ -31,25 +30,40 @@ In the browser
 <script type="text/javascript" src="https://unpkg.com/typedefs-js"></script>
 
 <script type="text/javascript">
-let ty = Typedefs.parseType('(name Bit (+ 1 1))')
-let haskell = Typedefs.generateCode('haskell', ty)
+let haskell = Typedefs. generateTermSerializers('haskell', '(name Bit (+ 1 1))')
 console.log(haskell)
 </script>
 ```
 
 ## API
 
-### `parseType : String -> (n ** TNamed n)`
+### `generateType : String -> String -> Either String String`
 
-Parse S-expression string to `TNamed`, returns `undefined` if it failed to parse the typedef.
+Generate the type definitions in the target language the given typedef as a string. 
 
-### `generateCode : String -> (n ** TNamed n) -> String`
-
-Translate `TNamed` into backend code. The first argument to this function is the backend name as a string:
+The first argument to this function is the backend name as a string:
 
 - `haskell`
 - `reasonml`
 - `json` (only supports **closed** typedefs)
+
+The second argument is the typedef string.
+
+Errors are returned as a string on the `Left` value of the either as is customary.
+
+### `generateTermSerializers : String -> String -> Either String String`
+
+Generate code in the target language that serialize and deserialize the given typedef as a string. 
+
+The first argument to this function is the backend name as a string:
+
+- `haskell`
+- `reasonml`
+- `json` (only supports **closed** typedefs)
+
+The second argument is the typedef string.
+
+Errors are returned as a string on the `Left` value of the either as is customary.
 
 ## Publishing an update to npm
 
