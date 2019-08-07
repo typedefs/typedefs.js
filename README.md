@@ -51,3 +51,6 @@ Translate `TNamed` into backend code. The first argument to this function is the
 - `reasonml`
 - `json` (only supports **closed** typedefs)
 
+## Publishing an update to npm
+
+Be sure to bump the version in `package.json`. Then also run `npm i` to rebuild and update the `package-lock.json`, then commit and push and CI should publish the build to npm.
