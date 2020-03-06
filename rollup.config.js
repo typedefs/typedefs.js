@@ -24,7 +24,7 @@ export default {
     file: `dist/typedefs.min.js`,
       format: "umd",
       name: "Typedefs",
-      sourceMap: true
+      sourcemap: true
   },
   plugins: plugins
 };
